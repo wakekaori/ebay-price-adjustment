@@ -34,5 +34,12 @@ module EbayPriceAdjustment
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    
+    config.active_job.queue_adapter = :sidekiq
+    
+    #https://zenn.dev/yoiyoicho/articles/03863702867eb0
+    #アプリのタイムゾーンを東京に設定
+    config.active_record.default_timezone = :local
+    config.time_zone = 'Tokyo'
   end
 end

@@ -1,0 +1,5 @@
+# :scheduler:
+#   :schedule:
+#     task_job:
+#       cron: '0 0/50 * * * *'
+#       class: TaskJob
